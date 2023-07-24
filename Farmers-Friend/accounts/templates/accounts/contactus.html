@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <style>
+        .Homepage .btn {
+            position: absolute;
+            top: 60%;
+            left: 65%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            background-color: #28a745;
+            color: white;
+            font-size: 20px;
+            padding: 15px 27px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+        }
+        
+        .Homepage .btn1 {
+            position: absolute;
+            top: 60%;
+            left: 75%;
+            transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            background-color: #28a745;
+            color: white;
+            font-size: 20px;
+            padding: 15px 27px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
+    <title>FarmerFriend</title>
+</head>
+
+<body>
+
+    <div id="google_translate_element_id"></div>
+
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en'
+            }, 'google_translate_element_id');
+        }
+    </script>
+
+    <script type="text/javascript">
+        (function() {
+            var gtConstEvalStartTime = new Date();
+            /*
+
+             Copyright The Closure Library Authors.
+             SPDX-License-Identifier: Apache-2.0
+            */
+            function d(b) {
+                var a = document.getElementsByTagName("head")[0];
+                a || (a = document.body.parentNode.appendChild(document.createElement("head")));
+                a.appendChild(b)
+            }
+
+            function _loadJs(b) {
+                var a = document.createElement("script");
+                a.type = "text/javascript";
+                a.charset = "UTF-8";
+                a.src = b;
+                d(a)
+            }
+
+            function _loadCss(b) {
+                var a = document.createElement("link");
+                a.type = "text/css";
+                a.rel = "stylesheet";
+                a.charset = "UTF-8";
+                a.href = b;
+                d(a)
+            }
+
+            function _isNS(b) {
+                b = b.split(".");
+                for (var a = window, c = 0; c < b.length; ++c)
+                    if (!(a = a[b[c]])) return !1;
+                return !0
+            }
+
+            function _setupNS(b) {
+                b = b.split(".");
+                for (var a = window, c = 0; c < b.length; ++c) a.hasOwnProperty ? a.hasOwnProperty(b[c]) ? a = a[b[c]] : a = a[b[c]] = {} : a = a[b[c]] || (a[b[c]] = {});
+                return a
+            }
+            window.addEventListener && "undefined" == typeof document.readyState && window.addEventListener("DOMContentLoaded", function() {
+                document.readyState = "complete"
+            }, !1);
+            if (_isNS('google.translate.Element')) {
+                return
+            }(function() {
+                var c = _setupNS('google.translate._const');
+                c._cest = gtConstEvalStartTime;
+                gtConstEvalStartTime = undefined;
+                c._cl = 'en';
+                c._cuc = 'googleTranslateElementInit';
+                c._cac = '';
+                c._cam = '';
+                c._ctkk = '443432.3380506509';
+                var h = 'translate.googleapis.com';
+                var s = (true ? 'https' : window.location.protocol == 'https:' ? 'https' : 'http') + '://';
+                var b = s + h;
+                c._pah = h;
+                c._pas = s;
+                c._pbi = b + '/translate_static/img/te_bk.gif';
+                c._pci = b + '/translate_static/img/te_ctrl3.gif';
+                c._pli = b + '/translate_static/img/loading.gif';
+                c._plla = h + '/translate_a/l';
+                c._pmi = b + '/translate_static/img/mini_google.png';
+                c._ps = b + '/translate_static/css/translateelement.css';
+                c._puh = 'translate.google.com';
+                _loadCss(c._ps);
+                _loadJs(b + '/translate_static/js/element/main.js');
+            })();
+        })();
+    </script>
+
+
+
+
+    <!--navbar starts-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <img src="/media/homepage/logo.png" height="40" width="40">
+        <a class="navbar-brand" href="/">FarmerFriend</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  <span class="navbar-toggler-icon"></span>
+</button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="aboutus">AboutUS</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact">ContactUS</a>
+                </li>
+            </ul>
+
+        </div>
+    </nav>
+
+    <!--navbar ends-->
+
+    <div class="container my-3">
+        <h3>Contact Us</h3>
+        <form action="" method="post">{% csrf_token %}
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" name="name" placeholder="Enter Your Name">
+            </div>
+            <div class="form-group">
+                <label for="name">Email</label>
+                <input type="email" class="form-control" id="email" name="email" placeholder="Enter Your Email">
+            </div>
+            <div class="form-group">
+                <label for="name">Phone</label>
+                <input type="tel" class="form-control" id="phone" name="phone" placeholder="Enter Your Phone Number">
+            </div>
+            <div class="form-group">
+                <div class="form-group">
+                    <label for="desc">How May We Help You ?</label>
+                    <textarea class="form-control" id="desc" name="desc" rows="3"></textarea>
+                </div>
+                <button type="submit" class="btn btn-success">Submit</button>
+            </div>
+
+        </form>
+    </div>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script>
+        /*$('#carouselExampleIndicators').carousel({
+                                                                                                                                                                            interval: 3000
+                                                                                                                                                                               });*/
+    </script>
+</body>
+
+</html>
